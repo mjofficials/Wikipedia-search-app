@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #fff;
+  --border-color: #000;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  background-image: url("pipewall.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  margin-bottom: 30px;
+  width: 150px;
+}
+
+/*shadow behind input and buttons*/
+.input-group {
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+}
+
+.search-input {
+  width: 600px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 18px;
+}
+
+.search-input:focus,
+.search-input:active {
+  border-color: #000;
+  outline: none;
+}
+
+/*remove underline when hover over links*/
+a {
+  text-decoration: none !important;
+  font-size: 2rem;
+  color: #000;
+}
+
+.search-results {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.result-item {
+  margin-bottom: 20px;
+}
+.result-item:hover {
+  background-color: hsl(48, 100%, 94%);
+}
+
+.result-title {
+  font-size: 22px;
+}
+
+.result-snippet {
+  font-size: 15px;
+  color: #444;
+}
+
+.result-link {
+  color: #006621;
+  text-decoration: none;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SPINNER CSS */
+
+.hidden {
+  display: none;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #000;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}

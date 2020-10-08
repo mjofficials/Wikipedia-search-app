@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wikipedia Search App</title>
+
+    <!-- FAVICON LINK -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+
+    <!-- CUSTOM CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <img
+          class="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/657px-Wikipedia-logo-v2.svg.png"
+          alt="Wikipedia Logo"
+        />
+
+        <form class="search-form js-search-form">
+          <input
+            placeholder="Type a keyword and press Enter to search"
+            type="search"
+            class="search-input input-group js-search-input"
+            autofocus
+          />
+        </form>
+      </header>
+
+      <!-- SPINNER -->
+      <div class="loading-indicator">
+        <div class="spinner js-spinner hidden">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+      <section class="search-results js-search-results"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
